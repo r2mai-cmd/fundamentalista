@@ -87,11 +87,6 @@ def main():
         key = norm(b3_name)
         candidates = by_name.get(key, [])
         if not candidates:
-            # Exact normalized prefix match handles occasional suffix differences without broad fuzzy matching.
-            candidates = [cnpj for n, ids in by_name.items()
-                          if len(key) >= 10 and len(n) >= 10 and (key.startswith(n) or n.startswith(key))
-                          for cnpj in ids]
-        if not candidates:
             unmatched += 1
             continue
         cnpj = candidates[0]
