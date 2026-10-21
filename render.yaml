@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: atlas-fundamental-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: CORS_ORIGINS
+        value: https://SEU-USUARIO.github.io
+      - key: ATLAS_DB_PATH
+        value: /var/data/atlas.db
+    disk:
+      name: atlas-data
+      mountPath: /var/data
+      sizeGB: 1
