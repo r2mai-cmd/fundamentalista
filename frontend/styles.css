@@ -20,3 +20,21 @@ html[data-theme="dark"] .source-logo{background:#2c4036;color:#a4dfbf}html[data-
 html[data-theme="dark"] .endpoint{background:#1a2221;border-color:var(--line)}html[data-theme="dark"] .endpoint button{border-color:#46514c;color:#d2dbd5}html[data-theme="dark"] .steps code{color:#a9baff}html[data-theme="dark"] #toast{background:#245e57;color:#fff}
 @media(max-width:480px){.theme-toggle{padding:8px 10px}.theme-toggle #themeLabel{display:none}}
 @media(max-width:1120px){.sidebar{padding:13px 20px;gap:12px}.brand{margin-right:auto}.main{padding:0 22px}.content-grid{grid-template-columns:1fr}.side-panel{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}.side-panel .panel-head,.side-panel .divider,.side-panel .small-title,.side-panel .steps,.side-panel .outline-btn{grid-column:span 2}.bottom-grid{grid-template-columns:1fr 1fr}.intro{grid-template-columns:1fr .7fr}}@media(max-width:760px){.sidebar{min-height:65px;padding:12px;gap:5px;flex-wrap:wrap}.brand{padding:0 5px;margin-right:auto}.brand>span:last-child,.nav-label,.nav span,.side-bottom>div:last-child{display:none}.mark{width:36px;height:36px}.nav{justify-content:center;padding:10px 8px}.side-bottom{justify-content:center;padding:10px;margin-left:4px}.main{padding:0 16px}.topbar{padding:20px 0}.pill{display:none}.intro{grid-template-columns:1fr;padding:28px 0 22px}.intro-art{height:125px}.metrics{grid-template-columns:repeat(2,1fr)}.bottom-grid{grid-template-columns:1fr}.side-panel{display:block}.side-panel .panel-head,.side-panel .divider,.side-panel .small-title,.side-panel .steps,.side-panel .outline-btn{grid-column:auto}}@media(max-width:480px){.main{padding:0 12px}.topbar h1{font-size:18px}.intro h2{font-size:34px;letter-spacing:-1.5px}.intro p{font-size:12px}.panel{padding:14px}.metric{padding:13px}.metric strong{font-size:24px}.search{flex-wrap:wrap}.search input{width:calc(100% - 55px);flex:1}.search button{width:100%}.panel-foot{flex-direction:column}.source-status{display:none}footer{flex-direction:column}footer span{text-align:left}}
+
+
+/* Leitura confortável: tipografia ligeiramente maior em toda a interface. */
+body{font-size:14px}
+.crumb,.eyebrow,.nav-label,.metric-top,.metric small,.panel-head p,
+.table-wrap th,.table-wrap td,.panel-foot,.disclaimer,.steps span,
+.source-row small,.road small,.api-card small,.art-card small{font-size:12px}
+.nav,.pill,.theme-toggle,.search input,.search button,.outline-btn{font-size:13px}
+.panel-head h3{font-size:17px}
+.company-name{font-size:14px}
+.company-sub{font-size:12px}
+.metric strong{font-size:29px}
+.steps b,.source-row b,.road b,.api-card b{font-size:13px}
+@media(max-width:480px){
+  body{font-size:14px}
+  .metric-top,.metric small,.panel-head p,.table-wrap td,.panel-foot{font-size:12px}
+  .metric strong{font-size:26px}
+}
