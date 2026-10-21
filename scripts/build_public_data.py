@@ -33,7 +33,7 @@ def load_cvm():
         cnpj = "".join(ch for ch in (row.get("CNPJ_CIA") or row.get("CNPJ") or "") if ch.isdigit())
         name = row.get("DENOM_SOCIAL") or row.get("DENOMINACAO_SOCIAL") or row.get("NOME_EMPRESARIAL") or ""
         status = row.get("SIT", "").upper()
-        if not cnpj or not name or ("ATIVO" not in status and "EM FUNCIONAMENTO" not in status):
+        if not cnpj or not name or (status not in {"ATIVO", "ATIVA", "EM FUNCIONAMENTO"} and "EM FUNCIONAMENTO" not in status):
             continue
         companies[cnpj] = {"cnpj": cnpj, "name": name, "trade_name": row.get("DENOM_COMERC", ""),
                            "status": status or "ATIVO", "source": "CVM / B3", "tickers": []}
