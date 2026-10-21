@@ -7,9 +7,11 @@ services:
     healthCheckPath: /api/health
     envVars:
       - key: CORS_ORIGINS
-        value: https://SEU-USUARIO.github.io
+        value: https://r2mai-cmd.github.io
       - key: ATLAS_DB_PATH
         value: /var/data/atlas.db
+      - key: CVM_FINANCIAL_YEARS
+        value: "5"
     disk:
       name: atlas-data
       mountPath: /var/data
